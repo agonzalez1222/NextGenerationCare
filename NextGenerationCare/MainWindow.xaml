@@ -5,11 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NextGenerationCare"
         mc:Ignorable="d" FontSize="20"
-        Title="Next Generation Care" Height="450" Width="800" FontFamily="Bell MT" FontStretch="Expanded">
-    <Grid Height="434" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5">
-        <Grid.Background>
-            <ImageBrush ImageSource="A:\Doctor Pictures\DNA.jpg"/>
-        </Grid.Background>
+        Title="Next Generation Care" Height="450" Width="800" FontFamily="Bell MT" FontStretch="Expanded" HorizontalAlignment="Center">
+    <Window.Background>
+        <ImageBrush ImageSource="A:\Doctor Pictures\DNA.jpg"/>
+    </Window.Background>
+    <Grid Height="434" VerticalAlignment="Center" HorizontalAlignment="Center" RenderTransformOrigin="0.5,0.5">
+        
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20" />
             <ColumnDefinition Width="auto" />
@@ -30,16 +31,21 @@
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
-            <RowDefinition Height="auto" />
+            <RowDefinition Height="50" />
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
             <RowDefinition Height="50" />
+            <RowDefinition Height="auto" />
             <RowDefinition Height="50" />
+            <RowDefinition Height="auto" />
             <RowDefinition Height="50" />
+            <RowDefinition Height="auto" />
             <RowDefinition Height="50" />
+            <RowDefinition Height="auto" />
             <RowDefinition Height="50" />
+            <RowDefinition Height="auto" />
             <RowDefinition Height="50" />
             <RowDefinition Height="*" />
             <RowDefinition Height="20" />
@@ -55,9 +61,10 @@
 
         <TextBox Name="strUserName" Grid.Column="6" Grid.Row="11" FontSize="20" Cursor="Pen" Background="White" 
                  HorizontalAlignment="Center" VerticalAlignment="Center" MinHeight="20" MinWidth="200" 
-                 MaxWidth="300" MaxHeight="30"/>
+                 MaxWidth="300" MaxHeight="30" MaxLength="14"/>
 
-        <TextBlock Name="lblPassword" Grid.Column="6" Grid.Row="12" FontSize="30" Foreground="White" TextAlignment="Center">
+        <TextBlock Name="lblPassword" Grid.Column="5" Grid.Row="12" FontSize="30" Foreground="White" TextAlignment="Center"
+                   HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="3">
             <TextBlock.Background>
                 <ImageBrush/>
             </TextBlock.Background> 
@@ -68,10 +75,10 @@
                      MaxHeight="32" HorizontalAlignment="Center" VerticalAlignment="Center" MinWidth="200" 
                      MinHeight="20" Cursor="Pen" MaxLength="12" />
 
-        <Button Name="btnLogin" Grid.Column="5" Grid.Row="15" Grid.ColumnSpan="1" >Login</Button>
+        <Button Name="btnLogin" Grid.Column="5" Grid.Row="14" Grid.ColumnSpan="1" >Login</Button>
         
-        <Button Name="btnForgotPassword" Grid.Column="6" Grid.Row="16" Grid.ColumnSpan="1" >Forgot Password</Button>
+        <Button Name="btnForgotPassword" Grid.Column="6" Grid.Row="15" Grid.ColumnSpan="1" >Forgot Password</Button>
 
-        <Button Name="btnSignUp" Grid.Column="7" Grid.Row="15" Grid.ColumnSpan="1" >Forgot Password</Button>
+        <Button Name="btnSignUp" Grid.Column="7" Grid.Row="14" Grid.ColumnSpan="1" >Forgot Password</Button>
     </Grid>
 </Window>
