@@ -7,14 +7,14 @@
         mc:Ignorable="d" FontSize="20"
         Title="Next Generation Care" Height="450" Width="800" FontFamily="Bell MT" FontStretch="Expanded" HorizontalAlignment="Center">
     <Window.Background>
-        <ImageBrush ImageSource="A:\Doctor Pictures\DNA.jpg"/>
+        <ImageBrush ImageSource="https://cdn.pixabay.com/photo/2018/07/15/10/44/dna-3539309_1280.jpg"/>
     </Window.Background>
     <Grid Height="434" VerticalAlignment="Center" HorizontalAlignment="Center" RenderTransformOrigin="0.5,0.5">
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="30" />
             <ColumnDefinition Width="170" />
-            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="100" />
             <ColumnDefinition Width="170" />
             <ColumnDefinition Width="auto" />
             <ColumnDefinition Width="auto" />
@@ -64,9 +64,9 @@
 
         <Button Name="btnLogin" Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="1" >Login</Button>
 
-        <Button Name="btnForgotPassword" Grid.Column="2" Grid.Row="9" Grid.ColumnSpan="1" >Forgot Password</Button>
+        <Button Name="btnSignUp" Grid.Column="2" Grid.Row="9" Grid.ColumnSpan="1" >Sign Up  </Button>
 
-        <Button Name="btnSignUp" Grid.Column="3" Grid.Row="7" Grid.ColumnSpan="1" >Forgot Password</Button>
+        <Button Name="btnForgotPassword" Grid.Column="3" Grid.Row="7" Grid.ColumnSpan="1" >Forgot Password</Button>
 
         <!-- Validation Label, Text and visibility will be changed based on  condition -->
         <TextBlock Name="lblValidation" Grid.Column="5" Grid.Row="18" Foreground="White"  Grid.ColumnSpan="3"
