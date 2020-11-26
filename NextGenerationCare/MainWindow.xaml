@@ -10,7 +10,7 @@
         <ImageBrush ImageSource="A:\Doctor Pictures\DNA.jpg"/>
     </Window.Background>
     <Grid Height="434" VerticalAlignment="Center" HorizontalAlignment="Center" RenderTransformOrigin="0.5,0.5">
-        
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20" />
             <ColumnDefinition Width="auto" />
@@ -70,15 +70,20 @@
             </TextBlock.Background> 
             Password:
         </TextBlock>
-        
+
         <PasswordBox Name="strPassword" Grid.Column="6" Grid.Row="13" FontSize="20" Background="White" MaxWidth="300"
                      MaxHeight="32" HorizontalAlignment="Center" VerticalAlignment="Center" MinWidth="200" 
                      MinHeight="20" Cursor="Pen" MaxLength="12" />
 
         <Button Name="btnLogin" Grid.Column="5" Grid.Row="14" Grid.ColumnSpan="1" >Login</Button>
-        
+
         <Button Name="btnForgotPassword" Grid.Column="6" Grid.Row="15" Grid.ColumnSpan="1" >Forgot Password</Button>
 
         <Button Name="btnSignUp" Grid.Column="7" Grid.Row="14" Grid.ColumnSpan="1" >Forgot Password</Button>
+
+        <!-- Validation Label, Text and visibility will be changed based on  condition -->
+        <TextBlock Name="lblValidation" Grid.Column="5" Grid.Row="18" Foreground="White"  Grid.ColumnSpan="3">
+            Invalid Username or Password
+        </TextBlock>
     </Grid>
 </Window>
