@@ -23,6 +23,29 @@ namespace NextGenerationCare
         public MainWindow()
         {
             InitializeComponent();
+            btnLogin.Click += BtnLogin_Click;
+        }
+
+        public short ValidateUsername(string UserName)
+        {
+            if(UserName.Length < 5)
+            {
+                return 1; 
+            }
+            return 0;
+        }
+
+        public void BtnLogin_Click(Object sender, RoutedEventArgs e)
+        {
+            if (ValidateUsername(strUserName.Text) == 1)
+            {
+                lblValidation.Visibility.Equals("Visible");
+                lblValidation.Text = "Invalid Username: username must be at least 4 characters";
+            }
+            else if (ValidateUsername("Test") == 2)
+            {
+                lblValidation.Text = "Invalid Username: username must be at least 4 characters";
+            }
         }
     }
 }
