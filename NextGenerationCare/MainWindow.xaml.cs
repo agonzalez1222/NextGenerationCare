@@ -39,12 +39,17 @@ namespace NextGenerationCare
         {
             if (ValidateUsername(strUserName.Text) == 1)
             {
-                lblValidation.Visibility.Equals("Visible");
+                lblValidation.Visibility = Visibility.Visible;
                 lblValidation.Text = "Invalid Username: username must be at least 4 characters";
             }
-            else if (ValidateUsername("Test") == 2)
+            else if (ValidateUsername(strUserName.Text) == 2)
             {
+                lblValidation.Visibility = Visibility.Visible;
                 lblValidation.Text = "Invalid Username: username must be at least 4 characters";
+            }
+            else if(ValidateUsername(strUserName.Text) == 0)
+            {
+                lblValidation.Visibility = Visibility.Hidden;
             }
         }
     }
