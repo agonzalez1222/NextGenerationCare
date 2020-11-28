@@ -13,9 +13,9 @@
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="30" />
-            <ColumnDefinition Width="170" />
-            <ColumnDefinition Width="100" />
-            <ColumnDefinition Width="170" />
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="200" />
             <ColumnDefinition Width="auto" />
             <ColumnDefinition Width="auto" />
             <ColumnDefinition Width="*" />
@@ -34,6 +34,7 @@
             <RowDefinition Height="20" />
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
+            <RowDefinition Height="20" />
             <RowDefinition Height="*" />
             <RowDefinition Height="30" />
         </Grid.RowDefinitions>
@@ -46,7 +47,7 @@
             Username:
         </TextBlock>
 
-        <TextBox Name="strUserName" Grid.Column="1" Grid.Row="3" FontSize="20" Cursor="Pen" Background="White" 
+        <TextBox Name="strUserName" Grid.Column="1" Grid.Row="3" FontSize="20" Cursor="Arrow" Background="White" 
                  HorizontalAlignment="Center" VerticalAlignment="Center" MinHeight="20" MinWidth="200" 
                  MaxWidth="300" MaxHeight="30" MaxLength="14" Grid.ColumnSpan="3"/>
 
@@ -60,17 +61,26 @@
 
         <PasswordBox Name="strPassword" Grid.Column="1" Grid.Row="5" FontSize="20" Background="White" MaxWidth="300"
                      MaxHeight="32" HorizontalAlignment="Center" VerticalAlignment="Center" MinWidth="200" 
-                     MinHeight="20" Cursor="Pen" MaxLength="12" Grid.ColumnSpan="3" />
+                     MinHeight="20" Cursor="Arrow" MaxLength="12" Grid.ColumnSpan="3" />
 
-        <Button Name="btnLogin" Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="1" >Login</Button>
+        <!--<Button Name="btnForgotPassword" Grid.Column="2" Grid.Row="8" Grid.ColumnSpan="1" >Forgot Password</Button>  -->
+        <Button Name="btnLogin" Grid.Column="2" Grid.Row="7" Grid.ColumnSpan="1" >Login</Button>
+        <!-- <Button Name="btnSignUp" Grid.Column="2" Grid.Row="9" Grid.ColumnSpan="1" >Sign Up  </Button>-->
 
-        <Button Name="btnSignUp" Grid.Column="2" Grid.Row="9" Grid.ColumnSpan="1" >Sign Up  </Button>
+        <TextBlock Name="lblForgotPassword" Grid.Column="2" Grid.Row="8" Grid.ColumnSpan="1" VerticalAlignment="Center"
+                   HorizontalAlignment="Center">
+            <Hyperlink Name="lnkForgotPassword" Foreground="White" >Forgot Password?</Hyperlink>
+        </TextBlock>
 
-        <Button Name="btnForgotPassword" Grid.Column="3" Grid.Row="7" Grid.ColumnSpan="1" >Forgot Password</Button>
+        <TextBlock Name="lblSignUp" Grid.Column="2" Grid.Row="9" Grid.ColumnSpan="1" VerticalAlignment="Center"
+                   HorizontalAlignment="Center">
+            <Hyperlink Name="lnkSignUp" Foreground="White" >Sign Up</Hyperlink>
+        </TextBlock>
 
         <!-- Validation Label, Text and visibility will be changed based on  condition -->
-        <TextBlock Name="lblValidation" Grid.Column="5" Grid.Row="18" Foreground="White"  Grid.ColumnSpan="3"
-                   HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Visibility="Hidden">
+        <TextBlock Name="lblValidation" Grid.Column="1" Grid.Row="10" Foreground="Yellow"  
+                   Grid.ColumnSpan="4"  FontSize="20" 
+                   Visibility="Hidden">
         </TextBlock>
     </Grid>
 </Window>

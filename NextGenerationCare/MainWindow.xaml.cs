@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Text.RegularExpressions;
 
 namespace NextGenerationCare
 {
@@ -26,28 +27,56 @@ namespace NextGenerationCare
             btnLogin.Click += BtnLogin_Click;
         }
 
-        public short ValidateUsername(string UserName)
+        public short ValidateUsername(string strUserName)
         {
-            if(UserName.Length < 5)
+            if(strUserName.Length < 4)
             {
                 return 1; 
             }
             return 0;
         }
 
+        public short ValidatePassword(string strPassword)
+        {
+            Regex regLetterCheck = new Regex((@"^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{6,}$"));
+            if (strPassword.Length < 6)
+            {
+                return 1;
+            }
+            else if(!regLetterCheck.IsMatch(strPassword))
+            {
+                return 2;
+            }
+            
+            return 0;
+        }
+
         public void BtnLogin_Click(Object sender, RoutedEventArgs e)
         {
-            if (ValidateUsername(strUserName.Text) == 1)
+            short shrtUsernameValid = ValidateUsername(strUserName.Text);
+            short shrtPasswordValid = ValidatePassword(strPassword.Password);
+
+            if (shrtUsernameValid == 1)
             {
                 lblValidation.Visibility = Visibility.Visible;
-                lblValidation.Text = "Invalid Username: username must be at least 4 characters";
+                lblValidation.Text = "**Invalid Username: username must be at least 4 characters";
             }
-            else if (ValidateUsername(strUserName.Text) == 2)
+            else if(shrtUsernameValid == 2)
             {
                 lblValidation.Visibility = Visibility.Visible;
-                lblValidation.Text = "Invalid Username: username must be at least 4 characters";
+                lblValidation.Text = "**Invalid Username: username must be at least 4 characters";
             }
-            else if(ValidateUsername(strUserName.Text) == 0)
+            else if(shrtPasswordValid == 1)
+            {
+                    lblValidation.Visibility = Visibility.Visible;
+                    lblValidation.Text = "**Invalid Password: Password must be at least 6 characters";
+            }
+            else if(shrtPasswordValid == 2)
+            {
+                lblValidation.Visibility = Visibility.Visible;
+                lblValidation.Text = "**Invalid Password: Password must be contain at least one letter and one number";
+            }
+            else if(shrtUsernameValid == 0 && shrtPasswordValid == 0)
             {
                 lblValidation.Visibility = Visibility.Hidden;
             }
