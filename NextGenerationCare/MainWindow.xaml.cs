@@ -74,7 +74,7 @@ namespace NextGenerationCare
             else if(shrtPasswordValid == 2)
             {
                 lblValidation.Visibility = Visibility.Visible;
-                lblValidation.Text = "**Invalid Password: Password must be contain at least one letter and one number";
+                lblValidation.Text = "**Invalid Password: Password must be contain at least\n  --one uppercase letter\n  --one lowercase letter\n  --one number";
             }
             else if(shrtUsernameValid == 0 && shrtPasswordValid == 0)
             {

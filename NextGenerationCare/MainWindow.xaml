@@ -78,8 +78,8 @@
         </TextBlock>
 
         <!-- Validation Label, Text and visibility will be changed based on  condition -->
-        <TextBlock Name="lblValidation" Grid.Column="1" Grid.Row="10" Foreground="Yellow"  
-                   Grid.ColumnSpan="4"  FontSize="20" 
+        <TextBlock Name="lblValidation" Grid.Column="1" Grid.Row="10" Grid.RowSpan="2" Foreground="Yellow"  
+                   Grid.ColumnSpan="5"  FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"
                    Visibility="Hidden">
         </TextBlock>
     </Grid>
