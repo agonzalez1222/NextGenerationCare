@@ -6,4 +6,8 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Page Remove="LogInWindow.xaml" />
+  </ItemGroup>
+
 </Project>
