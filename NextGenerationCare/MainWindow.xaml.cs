@@ -25,6 +25,7 @@ namespace NextGenerationCare
         {
             InitializeComponent();
             btnLogin.Click += BtnLogin_Click;
+           // lnkForgotPassword.Click += LnkForgotPassword_Click;
         }
 
         public short ValidateUsername(string strUserName)
@@ -80,6 +81,13 @@ namespace NextGenerationCare
             {
                 lblValidation.Visibility = Visibility.Hidden;
             }
+        }
+
+        private void LnkForgotPassword_Click(object sender, RoutedEventArgs e)
+        {
+           ForgotPass fp = new ForgotPass();
+            fp.Show();
+           
         }
     }
 }

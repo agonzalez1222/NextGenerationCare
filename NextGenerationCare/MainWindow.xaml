@@ -69,7 +69,7 @@
 
         <TextBlock Name="lblForgotPassword" Grid.Column="2" Grid.Row="8" Grid.ColumnSpan="1" VerticalAlignment="Center"
                    HorizontalAlignment="Center">
-            <Hyperlink Name="lnkForgotPassword" Foreground="White" >Forgot Password?</Hyperlink>
+            <Hyperlink Name="lnkForgotPassword" Click="LnkForgotPassword_Click" Foreground="White" >Forgot Password?</Hyperlink>
         </TextBlock>
 
         <TextBlock Name="lblSignUp" Grid.Column="2" Grid.Row="9" Grid.ColumnSpan="1" VerticalAlignment="Center"
