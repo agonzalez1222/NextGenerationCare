@@ -28,6 +28,8 @@
             <RowDefinition Height="50"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="50"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="50"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
@@ -40,6 +42,10 @@
                    Foreground="White" Text="Email / Username  " >
         </TextBlock>
 
-        <TextBox Name="strUserCredential" Grid.Row="3" Grid.Column="2" Background="#FFF0F0F0" BorderBrush="Black" />
+        <TextBox Name="strUserCredential" Grid.Row="3" Grid.Column="2" Background="#FFF0F0F0" BorderBrush="Black" FontSize="30" />
+
+        <Button Name="btnBack" Grid.Row="5" Grid.Column="1" FontSize="30"> 
+            Back
+        </Button>
     </Grid>
 </Window>
