@@ -34,12 +34,12 @@
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
 
-        <TextBlock x:Name="lblResetDirections" FontSize="35" Grid.Column="1" Grid.Row="1" Foreground="White" Grid.ColumnSpan="2">
-            Enter your username or email address below:
+        <TextBlock x:Name="lblResetDirections" FontSize="35" Grid.Column="1" Grid.Row="1" Foreground="White" Grid.ColumnSpan="2" >
+            Enter your email address below:
         </TextBlock>
 
-        <TextBlock Name="lblUsername" Grid.Column="1" Grid.Row="3" MinWidth="150" MinHeight="40" FontSize="25" 
-                   Foreground="White" Text="Email / Username  " >
+        <TextBlock Name="lblUsername" Grid.Column="1" Grid.Row="3" MinWidth="150" MinHeight="40" FontSize="40" 
+                   Foreground="White" Text="  Email:" >
         </TextBlock>
 
         <TextBox Name="strUserCredential" Grid.Row="3" Grid.Column="2" Background="#FFF0F0F0" BorderBrush="Black" FontSize="30" />
