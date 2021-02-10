@@ -5,13 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NextGenerationCare"
         mc:Ignorable="d"
-        Title="ForgotPass" Height="450" Width="800">
+        Title="Next Generation Care" Height="450" Width="800">
     <Window.Background>
         <ImageBrush ImageSource="https://cdn.pixabay.com/photo/2018/07/15/10/44/dna-3539309_1280.jpg"/>
     </Window.Background>
-    <Grid>
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="10"/>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="10"/>
             <ColumnDefinition Width="auto"/>
@@ -34,18 +36,24 @@
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
 
-        <TextBlock x:Name="lblResetDirections" FontSize="35" Grid.Column="1" Grid.Row="1" Foreground="White" Grid.ColumnSpan="2" >
+        <TextBlock x:Name="lblResetDirections" FontSize="35" Grid.Column="1" Grid.Row="1" Foreground="White" Grid.ColumnSpan="3" >
             Enter your email address below:
         </TextBlock>
 
         <TextBlock Name="lblUsername" Grid.Column="1" Grid.Row="3" MinWidth="150" MinHeight="40" FontSize="40" 
-                   Foreground="White" Text="  Email:" >
+                   Foreground="White" Text="Email:" >
         </TextBlock>
 
-        <TextBox Name="strUserCredential" Grid.Row="3" Grid.Column="2" Background="#FFF0F0F0" BorderBrush="Black" FontSize="30" />
+        <TextBox Name="strUserCredential" Grid.Row="3" Grid.Column="2" Background="#FFF0F0F0" BorderBrush="Black" FontSize="30" Grid.ColumnSpan="2" />
 
-        <Button Name="btnBack" Grid.Row="5" Grid.Column="1" FontSize="30"> 
+        <Button Name="btnBack" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" FontSize="30" MaxWidth="115" 
+                Margin="120,0, 200, 0"> 
             Back
         </Button>
+
+        <Button Name="btnSubmit" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2" Margin="175,0,10,0" FontSize="30"
+                MaxWidth="115"> 
+            
+            Submit </Button>
     </Grid>
 </Window>

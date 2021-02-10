@@ -20,6 +20,14 @@ namespace NextGenerationCare
         public ForgotPass()
         {
             InitializeComponent();
+            btnBack.Click += BtnBack_Click;
+
+
+        }
+
+        public void BtnBack_Click(Object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

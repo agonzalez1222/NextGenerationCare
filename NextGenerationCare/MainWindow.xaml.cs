@@ -19,6 +19,7 @@ namespace NextGenerationCare
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    /// Database connection (LocalDB)\NextGenerationCareDB
     public partial class MainWindow : Window
     {
         public MainWindow()
