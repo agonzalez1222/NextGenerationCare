@@ -81,6 +81,9 @@ namespace NextGenerationCare
             else if(shrtUsernameValid == 0 && shrtPasswordValid == 0)
             {
                 lblValidation.Visibility = Visibility.Hidden;
+                NextGenMenu menu = new NextGenMenu();
+                menu.Show();
+                this.Close();
             }
         }
 

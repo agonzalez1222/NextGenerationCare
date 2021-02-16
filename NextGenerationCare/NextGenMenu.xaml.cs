@@ -8,17 +8,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace NextGenerationCare
 {
     /// <summary>
-    /// Interaction logic for ForgotPassword.xaml
+    /// Interaction logic for NextGenMenu.xaml
     /// </summary>
-    public partial class ForgotPassword : Page
+    public partial class NextGenMenu : Window
     {
-        public ForgotPassword()
+        public NextGenMenu()
         {
             InitializeComponent();
         }

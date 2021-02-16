@@ -7,7 +7,7 @@
         mc:Ignorable="d" FontSize="20"
         Title="Next Generation Care" Height="450" Width="800" FontFamily="Bell MT" FontStretch="Expanded">
     <Window.Background>
-        <ImageBrush ImageSource="https://cdn.pixabay.com/photo/2018/07/15/10/44/dna-3539309_1280.jpg"/>
+        <ImageBrush ImageSource="https://cdn.pixabay.com/photo/2018/07/15/10/44/dna-3539309_960_720.jpg"/>
     </Window.Background>
 
     <Grid Height="434" VerticalAlignment="Center" HorizontalAlignment="Center" RenderTransformOrigin="0.5,0.5">
